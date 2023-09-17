@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header { /*nome landing page*/
+    padding: 10px 0;
+    background-color: #182C61;
+    color: #ecf0f1;
+}
+
+header h1 { /*adicionando fontes externas nos títulos e cabeçalho e alterando seu peso*/
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+}
+
+header nav li { /* cabeçalho links*/
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a { /* cabeçalho links a*/
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.container { /*ajuste para centralizar o cabeçalho*/
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container { /*ajuste dos links cabeçalho e da seção sobre*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about .container { /*ajuste dos links cabeçalho e da seção sobre*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#about { /*ajuste espaçamento sobre*/
+    padding: 24px 0;
+}
+
+#about img {
+    height: 320px;
+    width: 320px;
+}
+
+#about h2 { /*colocando margem no h2*/
+    color: #182C61;
+    font-style: italic;
+    padding-bottom: 16px;
+    margin-bottom: 38px;
+    margin-left: 32px;
+    border-bottom: 2px solid #182C61;
+}
+
+#about p { /*margem do paragráfo*/
+    margin-left: 32px;
+}
+
+.lista-tenis img {
+    max-width: 100%;
+    height: 250.875px;
+}
+
+.lista-tenis {
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%)
+}
+
+.lista-tenis {
+    column-gap: 1%;
+    row-gap: 5%;
+    list-style: none;
+}
+
+#products { /*ajuste espaçamento sobre*/
+    padding: 24px 0;
+}
+
+#products h2 { /*colocando margem no h2*/
+    color: #182C61;
+    font-style: italic;
+    padding-bottom: 16px;
+    margin-bottom: 46px;
+    border-bottom: 2px solid #182C61;
+}
+
+#products h3 {
+    padding: 16px 0;
+}
+
+button {
+    padding: 14px 4px;
+    font-size: 20px;
+    width: 250px;
+    margin-top: 12px;
+    cursor: pointer;
+    background-color: #182C61;
+    font-weight: bold;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #6580cc;
+}
+
+@media screen and (max-width: 640px) { /*@media screen é usado para ajustar a resolução para diversas plataformas, essa é de smartphone*/
+    header .container { /*ajuste dos links cabeçalho e da seção sobre*/
+        display: flex;
+        justify-content: space-between;
+        max-width: 90%;
+    }
+    
+    #about {
+        display: block;
+        font-size: 24px;
+    }
+
+    #about h2 {
+        margin-left: 0;
+    }
+
+    #about p {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #about .container,
+    #products .container {
+        max-width: 90%;
+        flex-direction: column; /*ajustando a direção do header para colunas*/
+    }
+
+    #about img {
+        margin-bottom: 32px;
+        width: 100%;
+    }
+
+    #products .lista-tenis {
+        display: block;
+        margin-bottom: 32px;
+    }
+
+    #products .lista-tenis img,
+    button {
+        width: 100%;
+    }
+
+    button {
+        margin-top: 12px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) { /*resolução ipad air*/
+    header .container { /*ajuste dos links cabeçalho e da seção sobre*/
+        display: flex;
+        justify-content: space-between;
+        max-width: 90%;
+    }
+    
+    #about {
+        display: block;
+        font-size: 24px;
+    }
+
+    #about h2 {
+        margin-left: 0;
+    }
+
+    #about p {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #about .container,
+    #products .container {
+        max-width: 90%;
+        flex-direction: column; /*ajustando a direção do header para colunas*/
+    }
+
+    #about img {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    #products .lista-tenis {
+        margin-bottom: 32px;
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    #products .lista-tenis img,
+    button {
+        width: 100%;
+    }
+}
